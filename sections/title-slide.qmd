@@ -11,11 +11,11 @@
 ::: {.column .information width="68%"}
 
 ::: {.title}
-Quarto template
+Miscellaneous topics
 :::
 
 ::: {.subtitle}
-HTML presentation w/ RevealJS framework
+Environment data, Repositories, File formats & Data storage
 :::
 
 ::: {.date}

@@ -8,27 +8,58 @@
 <br>
 <br>
 <br>
+
+
+:::: { .columns }
+
+::: { .column .center width="20%"}
+{{< fa temperature-three-quarters size=2x >}}
+<br>
+Environment data
+:::
+
+::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
+{{< fa warehouse size=2x >}}
+<br>
+Data repositories
+:::
+
+::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
+{{< fa file-import size=2x >}}
+<br>
+File formats
+:::
+
+::::
+
+
 <br>
 <br>
 
 :::: { .columns }
 
-::: { .column .center width="33%"}
-{{< fa code size=2x >}}
-<br>
-Section 1
+::: { .column .center width="20%"}
 :::
 
-::: { .column .center width="33%"}
-{{< fa brands github size=2x >}}
-<br>
-Section 2
+::: { .column .center width="20%"}
 :::
 
-::: { .column .center width="33%"}
-{{< fa book size=2x >}}
+::: { .column .center width="20%"}
+{{< fa share-nodes size=2x >}}
 <br>
-Resources
+Data storage
+:::
+
+::: { .column .center width="20%"}
+:::
+
+::: { .column .center width="20%"}
 :::
 
 ::::
