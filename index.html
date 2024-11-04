@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -347,7 +412,7 @@
 <p>Environment data, Repositories, File formats &amp; Data storage</p>
 </div>
 <div class="date">
-<p>October 2024</p>
+<p>November 2024</p>
 </div>
 <div class="columns authors">
 <div class="column author" style="width:32%;">
@@ -436,19 +501,138 @@ Author name<br/>
 <h1><i class="fa-solid fa-temperature-three-quarters" aria-label="temperature-three-quarters"></i> &nbsp;Environment data</h1>
 
 </section>
-<section id="coming-soon" class="slide level2">
-<h2>Coming soon</h2>
-<p>…</p>
+<section id="questions-to-ask" class="slide level2">
+<h2>Questions to ask</h2>
+<ul>
+<li>What is my research question?</li>
+<li>What do I need?</li>
+<li>Spatial extent and resolution</li>
+<li>Temporal extent and resolution</li>
+<li>What confidence do I have in the data?</li>
+</ul>
+</section>
+<section id="overview" class="slide level2">
+<h2>Overview</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Climate &amp; weather</strong></p>
+<ul>
+<li>WorldClim</li>
+<li>Chelsa</li>
+<li>CMIP6</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Land cover</strong></p>
+<ul>
+<li>Corine</li>
+<li>Copernicus</li>
+<li>WorldCover</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Soil data</strong></p>
+<ul>
+<li>SoilTemp</li>
+<li>HWSD</li>
+</ul>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Ecoregions</strong></p>
+<ul>
+<li>WWF MEOW</li>
+<li>WWF TEOW</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Protected areas</strong></p>
+<ul>
+<li>WDPA</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Country boundaries</strong></p>
+<ul>
+<li>Natural Earth</li>
+<li>GADM</li>
+</ul>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Socio-economics</strong></p>
+<ul>
+<li>FAO</li>
+<li>UNDP</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Elevation &amp; Bathymetry</strong></p>
+<ul>
+<li>DEM</li>
+<li>Bio-oracle</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Satellite data</strong></p>
+<ul>
+<li>NDVI</li>
+<li>LandSat</li>
+<li>Modis</li>
+</ul>
+</div></div>
 <!-- Insert section 'International repositories' -->
 </section></section>
 <section>
-<section id="data-repositories" class="title-slide slide level1 center">
-<h1><i class="fa-solid fa-warehouse" aria-label="warehouse"></i> &nbsp;Data repositories</h1>
+<section id="data-repositories-international" class="title-slide slide level1 center">
+<h1><i class="fa-solid fa-warehouse" aria-label="warehouse"></i> &nbsp;Data repositories (International)</h1>
 
 </section>
-<section id="coming-soon-1" class="slide level2">
-<h2>Coming soon</h2>
-<p>…</p>
+<section id="discipline-specific-repository" class="slide level2">
+<h2>Discipline-specific repository</h2>
+<p><br></p>
+<div class="columns">
+<div class="column center" style="width:33%;">
+<p><br><br><br><br> <img data-src="images/gbif-logo.png" style="width:50.0%"></p>
+</div><div class="column center" style="width:33%;">
+<p><br><br><br> <img data-src="images/knb-logo.png" style="width:40.0%"></p>
+</div><div class="column center" style="width:33%;">
+<p><img data-src="images/movebank-logo.jpg" style="width:80.0%"></p>
+</div></div>
+<div class="columns">
+<div class="column center" style="width:33%;">
+<div class="small">
+<p><a href="https://www.gbif.org/" class="uri">https://www.gbif.org/</a></p>
+</div>
+</div><div class="column center" style="width:33%;">
+<div class="small">
+<p><a href="https://knb.ecoinformatics.org/" class="uri">https://knb.ecoinformatics.org/</a></p>
+</div>
+</div><div class="column center" style="width:33%;">
+<div class="small">
+<p><a href="https://www.movebank.org/" class="uri">https://www.movebank.org/</a></p>
+</div>
+</div></div>
+</section>
+<section id="generalist-repository" class="slide level2">
+<h2>Generalist repository</h2>
+<p><br><br><br></p>
+<div class="columns">
+<div class="column center" style="width:25%;">
+<p><img data-src="images/dryad-logo.png" style="width:50.0%"></p>
+</div><div class="column center" style="width:25%;">
+<p><br> <img data-src="images/figshare-logo.png" style="width:70.0%"></p>
+</div><div class="column center" style="width:25%;">
+<p><br> <img data-src="images/osf-logo.png" style="width:80.0%"></p>
+</div><div class="column center" style="width:25%;">
+<p><br> <img data-src="images/zenodo-logo.png" style="width:80.0%"></p>
+</div></div>
+<div class="columns">
+<div class="column center" style="width:25%;">
+<p><a href="https://datadryad.org/" class="uri">https://datadryad.org/</a></p>
+</div><div class="column center" style="width:25%;">
+<p><a href="https://figshare.com/" class="uri">https://figshare.com/</a></p>
+</div><div class="column center" style="width:25%;">
+<p><a href="https://osf.io/" class="uri">https://osf.io/</a></p>
+</div><div class="column center" style="width:25%;">
+<p><a href="https://zenodo.org/" class="uri">https://zenodo.org/</a></p>
+</div></div>
 <!-- Insert section 'File formats' -->
 </section></section>
 <section>
@@ -456,19 +640,404 @@ Author name<br/>
 <h1><i class="fa-solid fa-file-import" aria-label="file-import"></i> &nbsp;File formats</h1>
 
 </section>
-<section id="coming-soon-2" class="slide level2">
-<h2>Coming soon</h2>
-<p>…</p>
+<section id="reading-data-files" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Plain text-based files</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Comma-separated values</strong> (<code>.csv</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Tab-separated values</strong> (<code>.tsv</code> &amp; <code>.txt</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>read.csv()</code> or <code>read.csv2()</code></li>
+<li><code>read.table()</code></li>
+<li><code>read.delim()</code></li>
+</ul>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> &nbsp;See also the package <a href="https://readr.tidyverse.org/"><code>readr</code></a></p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>read.table()</code></li>
+<li><code>read.delim()</code></li>
+</ul>
+<p><i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i> &nbsp;See also the package <a href="https://readr.tidyverse.org/"><code>readr</code></a></p>
+</div>
+</div></div>
+</section>
+<section id="reading-data-files-1" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Plain text-based files</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>JavaScript Object Notation</strong> (<code>.json</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Yet Another Markup Language</strong> (<code>.yml</code> &amp; <code>.yaml</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>jsonlite::fromJSON()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>yaml::read_yaml()</code></li>
+</ul>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Extensible Markup Language</strong> (<code>.xml</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Hypertext Markup Language</strong> (<code>.html</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>xml2::read_xml()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>xml2::read_html()</code></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="reading-data-files-2" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Plain text-based files</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Other plain text files</strong> (<code>.txt</code>, etc.)</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>readLines()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="reading-data-files-3" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Spreadsheets</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Microsoft Excel</strong> (<code>.xls</code> &amp; <code>.xlsx</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Google Sheets</strong> (online)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>readxl::read_excel()</code></li>
+<li><code>readxl::read_xls()</code></li>
+<li><code>readxl::read_xlsx()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>gsheet::gsheet2tbl()</code></li>
+</ul>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>OpenDocument Spreadsheet</strong> (<code>.ods</code>)</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>readODS::read_ods()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="reading-data-files-4" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong><i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp;binary files</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong><i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp;saved objects</strong> (<code>.Rdata</code> &amp; <code>.rds</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Quick Serialization of <i class="fa-brands fa-r-project" aria-label="r-project"></i> &nbsp;Objects</strong> (<code>.qs</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>load()</code></li>
+<li><code>readRDS()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>qs::qread()</code></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="reading-data-files-5" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Images (rasters)</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Joint Photographic Experts Group</strong> (<code>.jpg</code> &amp; <code>.jpeg</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Portable Network Graphics</strong> (<code>.png</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>jpeg::readJPEG()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>png::readPNG()</code></li>
+</ul>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Tagged Image File Format</strong> (<code>.tif</code> &amp; <code>.tiff</code>)</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>tiff::readTIFF()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="reading-data-files-6" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Spatial data files</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Vector layers</strong> (<code>.shp</code>, <code>.geojson</code>, <code>.gpkg</code>, etc.)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Raster layers</strong> (<code>.tif</code>, <code>.asc</code>, <code>.grd</code>, etc.)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>sf::st_read()</code></li>
+<li><code>terra::vect()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>terra::rast()</code></li>
+</ul>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Network Common Data Form - NetCDF</strong> (<code>.nc</code>)</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested functions:</em></p>
+<ul>
+<li><code>ncdf4::nc_open()</code></li>
+<li><code>terra::rast()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="reading-data-files-7" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>SQL databases</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>MySQL</strong></p>
+</div><div class="column" style="width:50%;">
+<p><strong>PostgreSQL</strong></p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RMySQL</code></p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="do">## Connect to MySQL database ----</span></span>
+<span id="cb1-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RMySQL<span class="sc">::</span><span class="fu">MySQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RPostgreSQL</code></p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="do">## Connect to PostgreSQL database ----</span></span>
+<span id="cb2-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RPostgreSQL<span class="sc">::</span><span class="fu">PostgreSQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>SQLite</strong> (<code>.sql</code>)</p>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RSQLite</code></p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="do">## Connect to SQLite database ----</span></span>
+<span id="cb3-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+
+</div></div>
+</section>
+<section id="reading-data-files-8" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Other formats</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Portable Document Format</strong> (<code>.pdf</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>BibTex</strong> (<code>.bib</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>pdftools::pdf_text()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>bib2df::bib2df()</code></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="reading-data-files-9" class="slide level2">
+<h2>Reading data files</h2>
+<p><i class="fa-solid fa-circle-right" aria-label="circle-right"></i> &nbsp;<strong>Compressed archives</strong></p>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>ZIP files</strong> (<code>.zip</code>)</p>
+</div><div class="column" style="width:50%;">
+<p><strong>TAR files</strong> (<code>.tar</code>)</p>
+</div></div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>unzip()</code></li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="small">
+<p><em>Suggested function:</em></p>
+<ul>
+<li><code>untar()</code></li>
+</ul>
+</div>
+</div></div>
+</section>
+<section id="encoding" class="slide level2">
+<h2>Encoding</h2>
+<iframe src="https://giphy.com/embed/6v2UJRyFAsTXgvJrin" width="360" height="360" style="margin: 0 auto;display: block;border-style:none;" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
 <!-- Insert section 'Data storage' -->
 </section></section>
 <section>
-<section id="data-storage" class="title-slide slide level1 center">
-<h1><i class="fa-solid fa-share-nodes" aria-label="share-nodes"></i> &nbsp;Data storage</h1>
+<section id="data-storage-cesab" class="title-slide slide level1 center">
+<h1><i class="fa-solid fa-share-nodes" aria-label="share-nodes"></i> &nbsp;Data storage (CESAB)</h1>
 
 </section>
-<section id="coming-soon-3" class="slide level2">
-<h2>Coming soon</h2>
-<p>…</p>
+<section id="hot-data-storage" class="slide level2">
+<h2>Hot data storage</h2>
+<ul>
+<li>Storage during project</li>
+</ul>
+</section>
+<section id="cold-data-storage" class="slide level2">
+<h2>Cold data storage</h2>
+<ul>
+<li>Release and sharing</li>
+</ul>
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo-affiliation.png" class="slide-logo"></p>
 <div class="footer footer-default">
