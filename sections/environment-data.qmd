@@ -1,5 +1,96 @@
 # {{< fa temperature-three-quarters >}} &nbsp;Environment data
 
-## Coming soon
 
-...
+## Questions to ask
+
+- What is my research question?
+- What do I need?
+- Spatial extent and resolution
+- Temporal extent and resolution
+- What confidence do I have in the data?
+
+
+
+## Overview
+
+:::: {.columns}
+
+::: {.column width=33%}
+**Climate & weather**
+
+- WorldClim
+- Chelsa
+- CMIP6
+:::
+
+::: {.column width=33%}
+**Land cover**
+
+- Corine
+- Copernicus
+- WorldCover
+:::
+
+::: {.column width=33%}
+**Soil data**
+
+- SoilTemp
+- HWSD
+:::
+
+::::
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=33%}
+**Ecoregions**
+
+- WWF MEOW
+- WWF TEOW
+:::
+
+::: {.column width=33%}
+**Protected areas**
+
+- WDPA
+:::
+
+::: {.column width=33%}
+**Country boundaries**
+
+- Natural Earth
+- GADM
+:::
+
+::::
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=33%}
+**Socio-economics**
+
+- FAO
+- UNDP
+:::
+
+::: {.column width=33%}
+**Elevation & Bathymetry**
+
+- DEM
+- Bio-oracle
+:::
+
+::: {.column width=33%}
+**Satellite data**
+
+- NDVI
+- LandSat
+- Modis
+:::
+
+::::
+

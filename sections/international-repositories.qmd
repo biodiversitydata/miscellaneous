@@ -1,5 +1,97 @@
-# {{< fa warehouse >}} &nbsp;Data repositories
+# {{< fa warehouse >}} &nbsp;Data repositories (International)
 
-## Coming soon
+## Discipline-specific repository
 
-...
+
+<br/>
+
+:::: {.columns}
+
+::: {.column .center width=33%}
+<br/><br/><br/><br/>
+![](images/gbif-logo.png){width=50%}
+:::
+
+::: {.column .center width=33%}
+<br/><br/><br/>
+![](images/knb-logo.png){width=40%}
+:::
+
+::: {.column .center width=33%}
+![](images/movebank-logo.jpg){width=80%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column .center width=33%}
+::: {.small}
+<https://www.gbif.org/>
+:::
+:::
+
+::: {.column .center width=33%}
+::: {.small}
+<https://knb.ecoinformatics.org/>
+:::
+:::
+
+::: {.column .center width=33%}
+::: {.small}
+<https://www.movebank.org/>
+:::
+:::
+
+::::
+
+
+
+## Generalist repository
+
+
+<br/><br/><br/>
+
+:::: {.columns}
+
+::: {.column .center width=25%}
+![](images/dryad-logo.png){width=50%}
+:::
+
+::: {.column .center width=25%}
+<br/>
+![](images/figshare-logo.png){width=70%}
+:::
+
+::: {.column .center width=25%}
+<br/>
+![](images/osf-logo.png){width=80%}
+:::
+
+::: {.column .center width=25%}
+<br/>
+![](images/zenodo-logo.png){width=80%}
+:::
+
+::::
+
+
+:::: {.columns}
+
+::: {.column .center width=25%}
+<https://datadryad.org/>
+:::
+
+::: {.column .center width=25%}
+<https://figshare.com/>
+:::
+
+::: {.column .center width=25%}
+<https://osf.io/>
+:::
+
+::: {.column .center width=25%}
+<https://zenodo.org/>
+:::
+
+::::

@@ -1,5 +1,612 @@
 # {{< fa file-import >}} &nbsp;File formats
 
-## Coming soon
 
-...
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Plain text-based files**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Comma-separated values** (`.csv`)
+:::
+
+::: {.column width=50%}
+**Tab-separated values** (`.tsv` & `.txt`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+  - `read.csv()` or `read.csv2()`
+  - `read.table()`
+  - `read.delim()`
+
+{{< fa lightbulb >}} &nbsp;See also the package [`readr`](https://readr.tidyverse.org/)
+
+:::
+:::
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+  - `read.table()`
+  - `read.delim()`
+
+{{< fa lightbulb >}} &nbsp;See also the package [`readr`](https://readr.tidyverse.org/)
+
+:::
+:::
+
+::::
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Plain text-based files**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**JavaScript Object Notation** (`.json`)
+:::
+
+::: {.column width=50%}
+**Yet Another Markup Language** (`.yml` & `.yaml`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `jsonlite::fromJSON()`
+:::
+:::
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `yaml::read_yaml()`
+:::
+:::
+
+::::
+
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Extensible Markup Language** (`.xml`)
+:::
+
+::: {.column width=50%}
+**Hypertext Markup Language** (`.html`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `xml2::read_xml()`
+:::
+:::
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `xml2::read_html()`
+:::
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Plain text-based files**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Other plain text files** (`.txt`, etc.)
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `readLines()`
+:::
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Spreadsheets**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Microsoft Excel** (`.xls` & `.xlsx`)
+:::
+
+::: {.column width=50%}
+**Google Sheets** (online)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+- `readxl::read_excel()`
+- `readxl::read_xls()`
+- `readxl::read_xlsx()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `gsheet::gsheet2tbl()`
+:::
+:::
+
+::::
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**OpenDocument Spreadsheet** (`.ods`)
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+- `readODS::read_ods()`
+:::
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**{{< fa brands r-project >}} &nbsp;binary files**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**{{< fa brands r-project >}} &nbsp;saved objects** (`.Rdata` & `.rds`)
+:::
+
+::: {.column width=50%}
+**Quick Serialization of {{< fa brands r-project >}} &nbsp;Objects** (`.qs`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+- `load()`
+- `readRDS()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `qs::qread()`
+:::
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Images (rasters)**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Joint Photographic Experts Group** (`.jpg` & `.jpeg`)
+:::
+
+::: {.column width=50%}
+**Portable Network Graphics** (`.png`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `jpeg::readJPEG()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `png::readPNG()`
+:::
+:::
+
+::::
+
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Tagged Image File Format** (`.tif` & `.tiff`)
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `tiff::readTIFF()`
+:::
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Spatial data files**
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Vector layers** (`.shp`, `.geojson`, `.gpkg`, etc.)
+:::
+
+::: {.column width=50%}
+**Raster layers** (`.tif`, `.asc`, `.grd`, etc.)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+- `sf::st_read()`
+- `terra::vect()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `terra::rast()`
+:::
+:::
+
+::::
+
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Network Common Data Form - NetCDF** (`.nc`)
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested functions:_
+
+- `ncdf4::nc_open()`
+- `terra::rast()`
+:::
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**SQL databases**
+
+<br/>
+
+
+:::: {.columns}
+
+::: {.column width=50%}
+**MySQL**
+:::
+
+::: {.column width=50%}
+**PostgreSQL**
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested packages:_ `DBI` & `RMySQL`
+
+<br/>
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Connect to MySQL database ----
+con <- DBI::dbConnect(RMySQL::MySQL(), dbname = ...)
+```
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested packages:_ `DBI` & `RPostgreSQL`
+
+<br/>
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Connect to PostgreSQL database ----
+con <- DBI::dbConnect(RPostgreSQL::PostgreSQL(), dbname = ...)
+```
+:::
+:::
+
+::::
+
+
+
+<br/>
+
+
+:::: {.columns}
+
+::: {.column width=50%}
+**SQLite** (`.sql`)
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested packages:_ `DBI` & `RSQLite`
+
+<br/>
+
+```{r}
+#| echo: true
+#| eval: false
+
+## Connect to SQLite database ----
+con <- DBI::dbConnect(RSQLite::SQLite(), dbname = ...)
+```
+:::
+:::
+
+::: {.column width=50%}
+:::
+
+::::
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Other formats**
+
+<br/>
+
+
+:::: {.columns}
+
+::: {.column width=50%}
+**Portable Document Format** (`.pdf`)
+:::
+
+::: {.column width=50%}
+**BibTex** (`.bib`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `pdftools::pdf_text()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `bib2df::bib2df()`
+:::
+:::
+
+::::
+
+
+
+
+
+## Reading data files
+
+{{< fa circle-right >}} &nbsp;**Compressed archives**
+
+<br/>
+
+
+:::: {.columns}
+
+::: {.column width=50%}
+**ZIP files** (`.zip`)
+:::
+
+::: {.column width=50%}
+**TAR files** (`.tar`)
+:::
+
+::::
+
+:::: {.columns}
+
+::: {.column width=50%}
+
+::: {.small}
+_Suggested function:_
+
+- `unzip()`
+:::
+:::
+
+::: {.column width=50%}
+::: {.small}
+_Suggested function:_
+
+- `untar()`
+:::
+:::
+
+::::
+
+
+
+## Encoding
+
+<iframe src="https://giphy.com/embed/6v2UJRyFAsTXgvJrin" width="360" height="360" style="margin: 0 auto;display: block;border-style:none;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>

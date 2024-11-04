@@ -1,5 +1,12 @@
-# {{< fa share-nodes >}} &nbsp;Data storage
+# {{< fa share-nodes >}} &nbsp;Data storage (CESAB)
 
-## Coming soon
+## Hot data storage
 
-...
+- Storage during project
+
+
+
+## Cold data storage
+
+- Release and sharing
+
