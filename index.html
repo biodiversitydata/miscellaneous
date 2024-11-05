@@ -604,9 +604,6 @@ Author name<br/>
 </section>
 <section id="land-cover" class="slide level2">
 <h2>Land cover</h2>
-<p><strong>Corine Land Cover</strong></p>
-<p><a href="https://land.copernicus.eu/en/products/corine-land-cover">CORINE Land Cover (CLC)</a> is a pan-European land cover and land use inventory with 44 thematic classes, ranging from broad forested areas to individual vineyards</p>
-<p>Updated every six years (most recent in 2018).</p>
 <p><br></p>
 <p><strong>Copernicus</strong></p>
 <blockquote>
@@ -615,6 +612,12 @@ Author name<br/>
 <p>At the heart of Copernicus is a constellation of satellites – the Sentinels – that make a huge number of daily observations of the Earth ecosystem.</p>
 <p>Each satellite has its specificities and you should read about them before anything else.</p>
 <p>Download data through many different portals: Copernicus Atmosphere Monitoring Service (CAMS) Portal, Copernicus Marine Monitoring Service (CMEMS) Portal, <a href="https://land.copernicus.eu/en">Copernicus Land Monitoring Service</a> where Corine is just one of them…</p>
+</section>
+<section id="land-cover-1" class="slide level2">
+<h2>Land cover</h2>
+<p><strong>Corine Land Cover</strong></p>
+<p><a href="https://land.copernicus.eu/en/products/corine-land-cover">CORINE Land Cover (CLC)</a> is a pan-European land cover and land use inventory with 44 thematic classes, ranging from broad forested areas to individual vineyards</p>
+<p>Updated every six years (most recent in 2018).</p>
 <p><br></p>
 <p><strong>WorldCover</strong></p>
 <blockquote>
@@ -644,14 +647,15 @@ Author name<br/>
 <p>Marine Ecoregions of the World: A Bioregionalization of Coastal and Shelf Areas</p>
 </blockquote>
 <p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas">here</a>!</p>
-<p><br></p>
+<p><br><br></p>
 <p><strong>WWF TEOW</strong></p>
 <blockquote>
 <p>Terrestrial Ecoregions of the World</p>
 </blockquote>
 <p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world">here</a>!</p>
-<p><br><br></p>
-<h3 id="protected-areas">Protected areas</h3>
+</section>
+<section id="protected-areas" class="slide level2">
+<h2>Protected areas</h2>
 <p><strong>WDPA</strong></p>
 <blockquote>
 <p>Most comprehensive global database of marine and terrestrial protected areas. It is a joint project between UN Environment Programme and the International Union for Conservation of Nature (IUCN).</p>
@@ -676,6 +680,20 @@ Author name<br/>
 <section id="country-boundaries-1" class="slide level2">
 <h2>Country boundaries</h2>
 <p>Also, check ou the R package <code>rnaturalearth</code>:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-2"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href=""></a></span>
+<span id="cb1-4"><a href=""></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>()</span>
+<span id="cb1-5"><a href=""></a>africa <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">continent =</span> <span class="st">"africa"</span>)</span>
+<span id="cb1-6"><a href=""></a>france <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">country =</span> <span class="st">"france"</span>)</span>
+<span id="cb1-7"><a href=""></a></span>
+<span id="cb1-8"><a href=""></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb1-9"><a href=""></a><span class="fu">ggplot</span>(africa) <span class="sc">+</span> <span class="fu">geom_sf</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -685,6 +703,7 @@ Author name<br/>
 </div>
 </div>
 </div>
+</div></div>
 </section>
 <section id="elevation-bathymetry" class="slide level2">
 <h2>Elevation &amp; Bathymetry</h2>
@@ -1072,8 +1091,8 @@ Author name<br/>
 <p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RMySQL</code></p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="do">## Connect to MySQL database ----</span></span>
-<span id="cb1-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RMySQL<span class="sc">::</span><span class="fu">MySQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="do">## Connect to MySQL database ----</span></span>
+<span id="cb2-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RMySQL<span class="sc">::</span><span class="fu">MySQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
@@ -1081,8 +1100,8 @@ Author name<br/>
 <p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RPostgreSQL</code></p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="do">## Connect to PostgreSQL database ----</span></span>
-<span id="cb2-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RPostgreSQL<span class="sc">::</span><span class="fu">PostgreSQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="do">## Connect to PostgreSQL database ----</span></span>
+<span id="cb3-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RPostgreSQL<span class="sc">::</span><span class="fu">PostgreSQL</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div></div>
@@ -1099,8 +1118,8 @@ Author name<br/>
 <p><em>Suggested packages:</em> <code>DBI</code> &amp; <code>RSQLite</code></p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="do">## Connect to SQLite database ----</span></span>
-<span id="cb3-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="do">## Connect to SQLite database ----</span></span>
+<span id="cb4-2"><a href=""></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(), <span class="at">dbname =</span> ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
