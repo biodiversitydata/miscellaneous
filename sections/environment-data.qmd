@@ -132,11 +132,6 @@ Meta data or data paper...?
 
 ## Land cover
 
-**Corine Land Cover**
-
-[CORINE Land Cover (CLC)](https://land.copernicus.eu/en/products/corine-land-cover) is a pan-European land cover and land use inventory with 44 thematic classes, ranging from broad forested areas to individual vineyards
-
-Updated every six years (most recent in 2018).
 
 <br>
 
@@ -150,7 +145,17 @@ Each satellite has its specificities and you should read about them before anyth
 
 Download data through many different portals: Copernicus Atmosphere Monitoring Service (CAMS) Portal, Copernicus Marine Monitoring Service (CMEMS) Portal, [Copernicus Land Monitoring Service](https://land.copernicus.eu/en) where Corine is just one of them...
 
+
+## Land cover
+
+**Corine Land Cover**
+
+[CORINE Land Cover (CLC)](https://land.copernicus.eu/en/products/corine-land-cover) is a pan-European land cover and land use inventory with 44 thematic classes, ranging from broad forested areas to individual vineyards
+
+Updated every six years (most recent in 2018).
+
 <br>
+
 
 **WorldCover**
 
@@ -188,7 +193,7 @@ Metadata of the first part of our database can however already be freely explore
 
 Super easy shapefile download [here](https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas)!
 
-<br>
+<br><br>
 
 **WWF TEOW**
 
@@ -196,9 +201,9 @@ Super easy shapefile download [here](https://www.worldwildlife.org/publications/
 
 Super easy shapefile download [here](https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world)!
 
-<br><br>
 
-### Protected areas
+
+## Protected areas
 
 **WDPA**
 
@@ -231,9 +236,32 @@ Available features list [here](https://www.naturalearthdata.com/features/).
 
 Also, check ou the R package `rnaturalearth`:
 
-```{r}
+:::: {.columns}
 
+::: {.column width=40%}
+
+```{r}
 #| echo: true
+#| eval: false
+
+library(rnaturalearth)
+library(ggplot2)
+
+world <- ne_countries()
+africa <- ne_countries(continent = "africa")
+france <- ne_countries(country = "france")
+
+theme_set(theme_bw())
+ggplot(africa) + geom_sf()
+```
+:::
+
+
+
+::: {.column width=60%}
+
+```{r}
+#| echo: false
 #| eval: true
 
 library(rnaturalearth)
@@ -242,17 +270,17 @@ library(ggplot2)
 world <- ne_countries()
 africa <- ne_countries(continent = "africa")
 france <- ne_countries(country = "france")
-```
-
-```{r}
-
-#| echo: true
-#| eval: true
 
 theme_set(theme_bw())
 ggplot(africa) + geom_sf()
 
 ```
+
+:::
+
+::::
+
+
 ## Elevation & Bathymetry
 
 **DEM**
