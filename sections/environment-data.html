@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Miscellaneous topics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="environment-data_files/libs/clipboard/clipboard.min.js"></script>
+<script src="environment-data_files/libs/quarto-html/quarto.js"></script>
+<script src="environment-data_files/libs/quarto-html/popper.min.js"></script>
+<script src="environment-data_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="environment-data_files/libs/quarto-html/anchor.min.js"></script>
+<link href="environment-data_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="environment-data_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="environment-data_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="environment-data_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="environment-data_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="environment-data_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="environment-data_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="fa-temperature-three-quarters-environment-data" class="level1">
+<h1><i class="fa-solid fa-temperature-three-quarters" aria-label="temperature-three-quarters"></i> &nbsp;Environment data</h1>
+<section id="questions-to-ask" class="level2">
+<h2 class="anchored" data-anchor-id="questions-to-ask">Questions to ask</h2>
+<ul>
+<li>What is my research question?</li>
+<li>What do I need?</li>
+<li>Spatial extent and resolution</li>
+<li>Temporal extent and resolution</li>
+<li>What confidence do I have in the data?</li>
+</ul>
+</section>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Climate &amp; weather</strong></p>
+<ul>
+<li>WorldClim</li>
+<li>Chelsa</li>
+<li>CMIP6</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Land cover</strong></p>
+<ul>
+<li>Corine</li>
+<li>Copernicus</li>
+<li>WorldCover</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Soil data</strong></p>
+<ul>
+<li>SoilTemp</li>
+<li>HWSD</li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Ecoregions</strong></p>
+<ul>
+<li>WWF MEOW</li>
+<li>WWF TEOW</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Protected areas</strong></p>
+<ul>
+<li>WDPA</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Country boundaries</strong></p>
+<ul>
+<li>Natural Earth</li>
+<li>GADM</li>
+</ul>
+</div>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>Socio-economics</strong></p>
+<ul>
+<li>FAO</li>
+<li>UNDP</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Elevation &amp; Bathymetry</strong></p>
+<ul>
+<li>DEM</li>
+<li>Bio-oracle</li>
+</ul>
+</div><div class="column" style="width:33%;">
+<p><strong>Satellite data</strong></p>
+<ul>
+<li>NDVI</li>
+<li>LandSat</li>
+<li>Modis</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="climate-weather" class="level2">
+<h2 class="anchored" data-anchor-id="climate-weather">Climate &amp; weather</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>WorldClim</strong></p>
+</div><div class="column" style="width:50%;">
+<p><img src="images/worldclim-logo.png" class="img-fluid"></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Downloadable GeoTiff zipped files of Average minimum temperature (°C), average maximum temperature (°C) and total precipitation (mm), at resolutions from 30 seconds (~1 km2 at the equator) to 10 minutes (~340 km2).</p>
+</blockquote>
+<ul>
+<li><a href="https://worldclim.org/data/worldclim21.html">Historical climate</a> data</li>
+<li><a href="https://worldclim.org/data/monthlywth.html">Historical monthly weather</a> data</li>
+<li><a href="https://worldclim.org/data/cmip6/cmip6climate.html">Future climate</a> data based on <a href="https://www.carbonbrief.org/cmip6-the-next-generation-of-climate-models-explained/">CMIP6 models</a></li>
+</ul>
+<p><br></p>
+<p><strong>Chelsa</strong></p>
+<blockquote class="blockquote">
+<p><strong>C</strong>limatologies at <strong>h</strong>igh resolution for the <strong>e</strong>arth’s <strong>l</strong>and <strong>s</strong>urface <strong>a</strong>reas is a very high resolution (30 arc sec, ~1km) global downscaled climate data set</p>
+</blockquote>
+<p>Technical specifications <a href="https://chelsa-climate.org/wp-admin/download-page/CHELSA_tech_specification_V2.pdf">PDF</a> : read it before you download anything !</p>
+<p>Meta data or data paper…?</p>
+</section>
+<section id="land-cover" class="level2">
+<h2 class="anchored" data-anchor-id="land-cover">Land cover</h2>
+<p><strong>Corine Land Cover</strong></p>
+<p><a href="https://land.copernicus.eu/en/products/corine-land-cover">CORINE Land Cover (CLC)</a> is a pan-European land cover and land use inventory with 44 thematic classes, ranging from broad forested areas to individual vineyards</p>
+<p>Updated every six years (most recent in 2018).</p>
+<p><strong>Copernicus</strong></p>
+<blockquote class="blockquote">
+<p>Earth observation component of the <strong>European Union’s Space programme</strong>, looking at our planet and its environment to benefit all European citizens. It offers information services that draw from satellite Earth Observation and in-situ (non-space) data.</p>
+</blockquote>
+<p>At the heart of Copernicus is a constellation of satellites – the Sentinels – that make a huge number of daily observations of the Earth ecosystem.</p>
+<p>Each satellite has its specificities and you should read about them before anything else.</p>
+<p>Download data through many different portals: Copernicus Atmosphere Monitoring Service (CAMS) Portal, Copernicus Marine Monitoring Service (CMEMS) Portal, <a href="https://land.copernicus.eu/en">Copernicus Land Monitoring Service</a> where Corine is just one of them…</p>
+<p><strong>WorldCover</strong></p>
+<blockquote class="blockquote">
+<p>WorldCover provides the first global land cover products for 2020 and 2021 at 10m resolution, developed and validated in near-real time based on Sentinel-1 and Sentinel-2 data.</p>
+</blockquote>
+<p>Data access protocol <a href="https://esa-worldcover.org/en/data-access">here</a>.</p>
+</section>
+<section id="soil-data" class="level2">
+<h2 class="anchored" data-anchor-id="soil-data">Soil data</h2>
+<p><strong>HWSD</strong></p>
+<blockquote class="blockquote">
+<p>Harmonized World Soil Database is a 30 arc-second raster database with over 15 000 different soil mapping units that combines existing regional and national updates of soil information worldwide.</p>
+</blockquote>
+<p>Data access description <a href="https://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v12/en/">here</a>.</p>
+<p><strong>SoilTemp</strong></p>
+<blockquote class="blockquote">
+<p>Global database of microclimate time series (soil and near-surface temperatures, soil moisture, …) and associated species data for use in ecology and beyond.</p>
+</blockquote>
+<p>100.000 time series from more than 100 countries across the globe, submitted by more than a thousand data contributors. <strong>The database is still under development and data is not yet open access.</strong></p>
+<p>Metadata of the first part of our database can however already be freely explored <a href="https://www.soiltempproject.com/the-soiltemp-database">here</a>.</p>
+</section>
+<section id="ecoregions" class="level2">
+<h2 class="anchored" data-anchor-id="ecoregions">Ecoregions</h2>
+<p><strong>WWF MEOW</strong></p>
+<blockquote class="blockquote">
+<p>Marine Ecoregions of the World: A Bioregionalization of Coastal and Shelf Areas</p>
+</blockquote>
+<p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/marine-ecoregions-of-the-world-a-bioregionalization-of-coastal-and-shelf-areas">here</a>!</p>
+<p><strong>WWF TEOW</strong></p>
+<blockquote class="blockquote">
+<p>Terrestrial Ecoregions of the World</p>
+</blockquote>
+<p>Super easy shapefile download <a href="https://www.worldwildlife.org/publications/terrestrial-ecoregions-of-the-world">here</a>!</p>
+<section id="protected-areas" class="level3">
+<h3 class="anchored" data-anchor-id="protected-areas">Protected areas</h3>
+<p><strong>WDPA</strong></p>
+<blockquote class="blockquote">
+<p>Most comprehensive global database of marine and terrestrial protected areas. It is a joint project between UN Environment Programme and the International Union for Conservation of Nature (IUCN).</p>
+</blockquote>
+<p>Interactive exploration <a href="https://www.protectedplanet.net/en/thematic-areas/wdpa?tab=Methodology">here</a>.</p>
+<p>And a user guide <a href="https://wdpa.s3-eu-west-1.amazonaws.com/WDPA_Manual/English/WDPA_WDOECM_Manual_1_6.pdf">PDF</a></p>
+</section>
+</section>
+<section id="country-boundaries" class="level2">
+<h2 class="anchored" data-anchor-id="country-boundaries">Country boundaries</h2>
+<p><strong>GADM</strong></p>
+<blockquote class="blockquote">
+<p>GADM provides maps and spatial data for all countries and their sub-divisions.</p>
+</blockquote>
+<p><a href="https://gadm.org/maps.html">Browse</a> our maps or <a href="https://gadm.org/download_country.html">download</a> the data by country.</p>
+<p><strong>Natural Earth</strong></p>
+<blockquote class="blockquote">
+<p>Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector and raster data.</p>
+</blockquote>
+<p>Available features list <a href="https://www.naturalearthdata.com/features/">here</a>.</p>
+</section>
+<section id="country-boundaries-1" class="level2">
+<h2 class="anchored" data-anchor-id="country-boundaries-1">Country boundaries</h2>
+<p>Also, check ou the R package <code>rnaturalearth</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rnaturalearth)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.3.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>world <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>africa <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">continent =</span> <span class="st">"africa"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>france <span class="ot">&lt;-</span> <span class="fu">ne_countries</span>(<span class="at">country =</span> <span class="st">"france"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>())</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(africa) <span class="sc">+</span> <span class="fu">geom_sf</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="environment-data_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="elevation-bathymetry" class="level2">
+<h2 class="anchored" data-anchor-id="elevation-bathymetry">Elevation &amp; Bathymetry</h2>
+<p><strong>DEM</strong></p>
+<p>Digital Elevation Model.</p>
+<p>Plenty available, but main ones are listed <a href="https://gisgeography.com/free-global-dem-data-sources/">here</a>.</p>
+<p><strong>Bio-oracle</strong></p>
+<blockquote class="blockquote">
+<p>Essential physical, chemical, biological and topographic data layers with global extent and uniform resolution for modelling the distribution of marine biodiversity.</p>
+</blockquote>
+<p>Download manager <a href="https://bio-oracle.org/downloads-to-email.php">here</a>.</p>
+<p>Also features bathymetry.</p>
+</section>
+<section id="satellite-data" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-data">Satellite data</h2>
+<p><strong>LandSat</strong></p>
+<blockquote class="blockquote">
+<p>Joint program of the USGS and NASA from 1972 through the present day. Today the Landsat satellites image the entire Earth’s surface at a 30-meter resolution about once every two weeks, including multispectral and thermal data.</p>
+</blockquote>
+<p>Check out LandSat collections <a href="https://developers.google.com/earth-engine/datasets/catalog/landsat">here</a>.</p>
+<p><strong>Modis</strong></p>
+<blockquote class="blockquote">
+<p>The Moderate Resolution Imaging Spectroradiometer (MODIS) sensors on NASA’s Terra and Aqua satellites have been acquiring images of the Earth daily since 1999, including daily imagery, 16-day BRDF-adjusted surface reflectance, and derived products such as vegetation indices and snow cover.</p>
+</blockquote>
+<p>Check out Modis collections <a href="https://developers.google.com/earth-engine/datasets/catalog/modis">here</a></p>
+<p><br><br></p>
+<p>/!&nbsp;<em>Satellite data is quite technical. Make sure you read the documentation - it’s easy to get lost.</em></p>
+</section>
+<section id="socio-economics" class="level2">
+<h2 class="anchored" data-anchor-id="socio-economics">Socio-economics</h2>
+<p><strong>FAO</strong></p>
+<blockquote class="blockquote">
+<p>Food and Agricultural Organization has a variety of statistical data on food, agriculture and the sustainable management of natural resources.</p>
+</blockquote>
+<p>Free and unrestricted access to 22 major databases. Check out portals list <a href="https://www.fao.org/statistics/data-dissemination/agrifood-systems/en">here</a>.</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
